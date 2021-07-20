@@ -1,3 +1,4 @@
+import uView from "uview-ui"
 import Vue from 'vue'
 import App from './App'
 
@@ -9,3 +10,4 @@ const app = new Vue({
   ...App
 })
 app.$mount()
+Vue.use(uView)
