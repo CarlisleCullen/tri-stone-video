@@ -6,7 +6,13 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": "微信小电视"
+      }
+    },
+    {
+      "path": "pages/show/index",
+      "style": {
+        "navigationBarTitleText": "微信小电视"
       }
     }
   ],

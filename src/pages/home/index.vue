@@ -54,7 +54,6 @@
   </view>
 </template>
 <script>
-import classifyData from '@/static/classify.data.js'
 export default {
   data () {
     return {
@@ -88,40 +87,47 @@ export default {
     })
   },
   onReady () {
-    this.getMenuItemTop()
   },
   methods: {
     //搜索
-    onSearch () {
-      let that = this
-      this.database.collection('tv_channel').where({
-        tags: {
-          $regex: '.*' + this.searchText + '.*',
-          $options: 'i'
-        }
-      }).limit(80).get({
-        success: function (res) {
-          let channels = res.data || []
-          console.log(channels)
-
-          let groups = that.channelTypes
-          that.tabbar = []
-          for (let gIndex in groups) {
-            groups[gIndex]['channels'] = []
-            for (let cIndex in channels) {
-              if (channels[cIndex].type === groups[gIndex].code) {
-                groups[gIndex]['channels'].push(channels[cIndex])
-              }
-            }
-            if (groups[gIndex]['channels'].length > 0) {
-              that.tabbar.push(groups[gIndex])
-            }
+    async onSearch () {
+      const countResult = await this.database.collection('tv_channel').count()
+      const total = countResult.total
+      const batchTimes = Math.ceil(total / 20)
+      const tasks = []
+      for (let i = 0; i < batchTimes; i++) {
+        const promise = this.database.collection('tv_channel').where({
+          tags: {
+            $regex: '.*' + this.searchText + '.*',
+            $options: 'i'
           }
-        },
-        fail: function (res) {
-          console.log("查询频道失败！", res)
-        },
+        }).skip(i * 20).limit(20).get()
+        tasks.push(promise)
+      }
+      // 等待所有
+      let res = (await Promise.all(tasks)).reduce((acc, cur) => {
+        return {
+          data: acc.data.concat(cur.data),
+          errMsg: acc.errMsg,
+        }
       })
+      let channels = res.data || []
+      let groups = this.channelTypes
+      this.tabbar = []
+      for (let gIndex in groups) {
+        groups[gIndex]['channels'] = []
+        for (let cIndex in channels) {
+          if (channels[cIndex].type === groups[gIndex].code) {
+            groups[gIndex]['channels'].push(channels[cIndex])
+          }
+        }
+        if (groups[gIndex]['channels'].length > 0) {
+          this.tabbar.push(groups[gIndex])
+        }
+      }
+      console.log()
+      this.getMenuItemTop()
+      this.swichMenu(0)
     },
     // 点击左边的栏目切换
     async swichMenu (index) {
@@ -188,12 +194,13 @@ export default {
         let selectorQuery = uni.createSelectorQuery()
         selectorQuery.selectAll('.class-item').boundingClientRect((rects) => {
           // 如果节点尚未生成，rects值为[](因为用selectAll，所以返回的是数组)，循环调用执行
-          if (!rects.length) {
+          if (rects.length != this.tabbar.length) {
             setTimeout(() => {
               this.getMenuItemTop()
             }, 10)
             return
           }
+          this.arr = []
           rects.forEach((rect) => {
             // 这里减去rects[0].top，是因为第一项顶部可能不是贴到导航栏(比如有个搜索框的情况)
             this.arr.push(rect.top - rects[0].top)
