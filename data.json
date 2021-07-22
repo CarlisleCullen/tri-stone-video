@@ -1,17 +1,135 @@
-
-    {
-      "name": "CCTV-1",
-      "desc": "中央一套",
-      "type":"ZYWSHD",
-      "icon": "https://cdn.uviewui.com/uview/common/classify/1/1.jpg",
-      "line1": "xianluyi",
-      "tags": "中央电视台，中央综合频道，新闻联播"
-    }
-    {
-      "name": "CCTV-2",
-      "desc": "中央二套",
-      "type":"ZYWSHD",
-      "icon": "https://cdn.uviewui.com/uview/common/classify/1/1.jpg",
-      "line1": "xianluyi",
-      "tags": "中央电视台，中央财经频道"
-    }
+{
+  "name": "CCTV-1",
+  "desc": "中央电视台第一套节目综合频道，1958年开播。打造以新闻为主的精品综合频道，传递力量、温暖和希望。",
+  "type": "ZYWSHD",
+  "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEdqDZjOQDxRMIrB68w5uI160414/ELMTJYlHrKQaMIltnzDzGfw7160414_1460630822.png",
+  "line1": 1,
+  "tags": "CCTV-1，中央一套，cctv1，中央电视台，CCTV综合频道，新闻联播",
+  "url": "rtmp://58.200.131.2:1935/livetv/cctv1"
+}
+{
+    "name": "CCTV-2",
+    "desc": "中国中央电视台财经频道以专业财经信息为核心内容，以生活服务和消费时尚为辅助内容，1987年2月1日正式开播，现已实现全天24小时播出。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEGJXtt9IosRPRo2JkaKLr160414/ELMTBuLpRx1rF76N1FUQCvoY160414_1460616309.png",
+    "line1": 1,
+    "tags": "CCTV-2，中央二套，cctv2，中央电视台，CCTV财经频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv2"
+  }
+{
+    "name": "CCTV-3",
+    "desc": "综艺频道是以播出音乐及歌舞节目为主的专业频道。该频道以创作精品栏目、繁荣电视文艺为宗旨,融各类文艺性节目为一体。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEbs6B8UI4UiVRrV9FOrhu160415/ELMTQjSbrJSfsvkXVSxmrs2K160415_1460700896.png",
+    "line1": 1,
+    "tags": "CCTV-3，中央三套，cctv3，中央电视台，CCTV综艺频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv3"
+  }
+{
+    "name": "CCTV-4",
+    "desc": "中国中央电视台中文国际频道（CCTV-4）是中央电视台唯一一个面向全球播出的中文频道。目标观众是全球华人，特别是居住在海外的华人、华侨以及港、澳、台同胞。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE0zGSkJyGWSfe7p5hmd2O160414/ELMTpczNhFfnjUTDVZHJBDwt160414_1460623280.png",
+    "line1": 1,
+    "tags": "CCTV-4，中央四套，cctv4，中央电视台，CCTV中文国际频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv4"
+  }
+{
+    "name": "CCTV-5",
+    "desc": "中央电视台体育频道（CCTV-5）是中国开播最早、规模最大、拥有世界众多顶级赛事独家报道权的专业体育频道。于1995年1月1日正式开播，全天24小时播出，是中国观众收看体育赛事的首选频道。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGETEIZZ4GiRbyPpk11xQdL160414/ELMTWHMxJ0d8XhldQZEClglQ160414_1460625135.png",
+    "line1": 1,
+    "tags": "CCTV-5，中央五套，cctv5，中央电视台，CCTV体育频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv5"
+  }
+{
+    "name": "CCTV-6",
+    "desc": "CCTV-6电影是中国大陆综合性的电影专业频道，由国家电影局负责运营和日常管理，使用中国中央电视台的品牌及标志，是唯一的国家级专业电影频道，以普通话广播为主。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEqfbmcwebnV2G5GOSR0a1160414/ELMT1hb2TZo6DZYMiSI5bCXx160415_1460688436.png",
+    "line1": 1,
+    "tags": "CCTV-6，中央六套，cctv6，中央电视台，CCTV电影频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv6"
+  }
+{
+    "name": "CCTV-7",
+    "desc": "CCTV-7国防军事频道以深入宣传贯彻落实习近平新时代中国特色社会主义思想，深入阐释习近平强军思想为基本定位，报道我国国防和军队建设成就、展示人民军队新风貌，是普及国防教育、传播军事知识的重要平台。",
+    "type": "ZYWSHD",
+    "icon": "https://p2.img.cctvpic.com/uploadimg/2019/07/30/1564461292719129.png",
+    "line1": 1,
+    "tags": "CCTV-7，中央七套，cctv7，中央电视台，CCTV国防军事频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv7"
+  }
+{
+    "name": "CCTV-8",
+    "desc": "中国中央电视台电视剧频道（频道呼号：CCTV-8 电视剧），是一个以电视剧为主的专业频道，该频道为中央电视台最具权威、最专业的电视剧频道，1994年12月13日开播，现已实现全天24小时播出。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGER9i7AU0AMa2t9CzJTltU160415/ELMTAvdUhtcxBVi7PEBt5RRk160415_1460704800.png",
+    "line1": 1,
+    "tags": "CCTV-8，中央八套，cctv8，中央电视台，CCTV电视剧频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv8"
+  }
+{
+    "name": "CCTV-9",
+    "desc": "CCTV-9纪录频道于2011年1月1日开播后，以高忠诚度、高关注度和高美誉度迅速成长为中央电视台的极具标志性品牌频道之一，业已成为中国最具潜在国际影响力的电视传播媒介。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEVkcgLVeByP5UX9bHs3eH160415/ELMTZmVT3Pfpd5YHeduVKOMG160415_1460709834.jpg",
+    "line1": 1,
+    "tags": "CCTV-9，中央九套，cctv9，中央电视台，CCTV纪录频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv9"
+  }
+{
+    "name": "CCTV-10",
+    "desc": "中央电视台科教频道CCTV-10于2001年7月9日开播，是中国科教文化传播的第一电视平台，是以教科文题材为主要内容的专业电视频道。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEvZ9e3BrepuedklC5JxRT160414/ELMTJOlaMQnHhArGrpnFt4eJ160414_1460619399.png",
+    "line1": 1,
+    "tags": "CCTV-10，中央十套，cctv10，中央电视台，CCTV科教频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv10"
+  }
+{
+    "name": "CCTV-11",
+    "desc": "中央电视台戏曲频道是以弘扬和发展我国优秀戏曲艺术，满足戏迷审美要求为宗旨开办的专业频道，是中国覆盖面最广、影响力最大的专业性戏曲频道。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEuSNaRsCv3sJp0fqoaSzo160414/ELMTezyF0lKoM39nStxks2br160415_1460685302.png",
+    "line1": 1,
+    "tags": "CCTV-11，中央十一套，cctv11，中央电视台，CCTV戏曲频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv11"
+  }
+{
+    "name": "CCTV-12",
+    "desc": "中央电视台社会与法频道是播出道德和法制类节目的专业频道，制作播出包括《天网》、《道德观察》、《法律讲堂》、《忏悔录》、《见证》、《一线》、《热线12》等优秀节目。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE2nqjXaCFGaP8U89Jw27I160414/ELMTHLyrppf0tVLSR6umKlCB160414_1463551211.png",
+    "line1": 1,
+    "tags": "CCTV-12，中央十二套，cctv12，中央电视台，CCTV社会与法频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv12"
+  }
+{
+    "name": "CCTV-13",
+    "desc": "中央电视台新闻频道（CCTV-13）于2003年5月1日起试播，同年7月1日起正式播出。全天24小时直播，专业播送新闻、评论、访谈的电视纯专业新闻频道。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1dzdfA9CsHZAlnKJX7NE160113/ELMTFsE3wCrmJXPWgRi9vlhb160113_1459395017.png",
+    "line1": 1,
+    "tags": "CCTV-13，中央十三套，cctv13，中央电视台，CCTV新闻频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv13"
+  }
+{
+    "name": "CCTV-14",
+    "desc": "中国中央电视台少儿频道是中国中央电视台以少年儿童为对象而开设的电视频道。 少儿频道的核心理念是尊重、支持、引导、快乐。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEQ1KSin2j2U5FERGWHp1h160415/ELMTnGlKHUJZi7lz19PEnqhM160415_1460715755.png",
+    "line1": 1,
+    "tags": "CCTV-14，中央十四套，cctv14，中央电视台，CCTV少儿频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv14"
+  }
+{
+    "name": "CCTV-15",
+    "desc": "中央电视台音乐频道是中国成立最早，覆盖最广，影响最大的唯一的国家级音乐频道。频道播出的内容集中外古典音乐之大成、独享世界各民族音乐经典、荟萃中外经典流行音乐，大力弘扬高雅音乐艺术。",
+    "type": "ZYWSHD",
+    "icon": "https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGEO8MkQf6EuyzAGbRG6ONa160414/ELMTBc9qrN6J3IxBmUW7RpD4160414_1460623567.png",
+    "line1": 1,
+    "tags": "CCTV-15，中央十五套，cctv15，中央电视台，CCTV音乐频道",
+    "url": "rtmp://58.200.131.2:1935/livetv/cctv15"
+  }

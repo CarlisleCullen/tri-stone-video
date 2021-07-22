@@ -36,12 +36,13 @@
             </view>
             <view class="item-container">
               <view class="thumb-box"
-                    v-for="(item1, index1) in item.channels"
-                    :key="index1">
+                    v-for="(channel, channelIndex) in item.channels"
+                    @click="videoShow(channel)"
+                    :key="channelIndex">
                 <image class="item-menu-image"
-                       :src="item1.icon"
-                       mode=""></image>
-                <view class="item-menu-name">{{item1.name}}</view>
+                       :src="channel.icon"
+                       mode="aspectFit"></image>
+                <view class="item-menu-name">{{channel.name}}</view>
               </view>
             </view>
           </view>
@@ -85,12 +86,18 @@ export default {
         console.log("节目列表获取失败！", res)
       },
     })
+    uni.getSystemInfo({
+      success: function (res) {
+        uni.setStorageSync('systemInfo', res)
+      },
+    })
   },
   onReady () {
   },
   methods: {
     //搜索
     async onSearch () {
+      console.log('onSearch')
       const countResult = await this.database.collection('tv_channel').count()
       const total = countResult.total
       const batchTimes = Math.ceil(total / 20)
@@ -233,6 +240,15 @@ export default {
           }
         }
       }, 10)
+    },
+    videoShow (channel) {
+      let page = "/pages/show/index?url=" + channel.url
+        + "&icon=" + channel.icon
+        + "&desc=" + channel.desc
+
+      uni.navigateTo({
+        url: page,
+      })
     }
   }
 }

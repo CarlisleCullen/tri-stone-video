@@ -47,7 +47,7 @@
   },
   "quickapp": {},
   "mp-weixin": {
-    "appid": "wxd725eae18dc08d8c",
+    "appid": "wx04039d60e05872fe",
     "cloudfunctionRoot": "static/cloudfunctions/",
     "setting": {
       "urlCheck": false

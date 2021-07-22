@@ -11,7 +11,7 @@ export default {
   }
 }
 wx.cloud.init({
-  env: 'prod-0g6n6jzd6b8f76fe',
+  env: 'test-2g5447ambbb1fdbc',
   traceUser: true
 })
 </script>
